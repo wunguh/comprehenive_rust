@@ -47,3 +47,31 @@ User Defined Types
 // fn main() {
 //     println!("result: {}", interproduct(120, 100, 248));
 // }
+
+// 5.5 Type Inference
+// fn takes_u32(a: u32) {
+//     println!("u32: {a}");
+// }
+// fn takes_i8(a: i8) {
+//     println!("i8: {a}");
+// }
+// fn main() {
+//     let x = 10;
+//     let y = 127;
+//     takes_u32(x);
+//     takes_i8(y);
+// }
+
+// 5.6 Exercise: Fibonacci
+// fn fib(n: u128) -> u128 {
+//     if n < 2 {
+//         n
+//     } else {
+//         fib(n-1) + fib(n-2)
+//     }
+// }
+// fn main() {
+//     let n: u128 = 8;
+//     println!("fib({n}) = {}", fib(n));
+// }
+

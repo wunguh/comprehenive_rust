@@ -75,3 +75,149 @@ User Defined Types
 //     println!("fib({n}) = {}", fib(n));
 // }
 
+// 6. Control Flow Basics
+
+// 6.1 Blocks and Scopes
+// fn main() {
+//      let z = 13;
+//      let x = {
+//         let y = 10;
+//         dbg!(y);
+//         z - y
+//      };
+//      dbg!(x);
+//     // dbg!(y);
+// }
+
+// 6.2 if Expressions
+// fn main() {
+//     let x = 101;
+//     if x == 0 {
+//         println!("zero!");
+//     } else if x < 100 {
+//         println!("biggish");
+//     } else {
+//         println!("yuge");
+//     }
+// }
+// fn main() {
+//     let x = 21;
+//     let size = if x < 20 {"small"} else {"big"};
+//     println!("{x} is {size}");
+// }
+
+// 6.3 match Expressions
+// fn main() {
+//     let val = 1;
+//     match val {
+//         1 => println!("one"),
+//         10 => println!("ten"),
+//         100 => println!("one hundred"),
+//         _ => {
+//             println!("something else");
+//         }
+//     }
+// }
+// fn main() {
+//     let flag = 4;
+//     let val = match flag {
+//         1 => true,
+//         0 => false,
+//         _ => true
+//     };
+//     println!("The value of {flag} is {val}.");
+// }
+
+// 6.4 Loops
+    // while loop
+    // fn main() {
+    //     let mut x = 200;
+    //     while x >= 10 {
+    //         x -= 10;
+    //         dbg!(x);
+    //     }
+    // }
+    // for loop
+    // fn main() {
+    //     for x in 0..5 {
+    //         dbg!(x);
+    //     }
+    //     for elem in [2, 4, 8, 16, 32] {
+    //         dbg!(elem);
+    //     }
+    // }
+    // standard loop
+    // fn main() {
+    //     let mut i = 0;
+    //     loop {
+    //         i += 1;
+    //         dbg!(i);
+    //         if i >= 20 {
+    //             break;
+    //         }
+    //     }
+    // }
+
+// 6.5 break and continue
+// fn main() {
+//     let mut i = 0;
+//     loop {
+//         dbg!(i);
+//         i += 1;
+//         if i > 5 {
+//             break;
+//         }
+//         if i % 2 == 0 {
+//             continue;
+//         }
+//     }
+// }
+// labels
+// fn main() {
+//     let s = [[5, 6 , 7], [8, 9, 10], [11, 12, 13]];
+//     let mut elements_searched = 1;
+//     let target_value = 5;
+//     'outer: for i in 0..=2 {
+//         for j in 0..=2 {
+//             elements_searched += 1;
+//             if s[i][j] == target_value {
+//                 println!("target_value found at location {},{}", i, j);
+//                 break 'outer;
+//             }
+//         }
+//     }
+//     dbg!(elements_searched);
+// }
+
+// 6.6 Functions
+// fn gcd(a: u32, b: u32) -> u32 {
+//     if b > 0 {
+//         dbg!(a, b);
+//         gcd(b, a % b)
+//     } else {
+//         a
+//     }
+// }
+// fn main() {
+//     dbg!(gcd(1024, 32));
+// }
+
+use std::iter::Product;
+
+// 6.7 Macros
+fn factorial(n: u32) -> u32 {
+    let mut product = 1;
+    for i in 1..=n {
+        product *= dbg!(i);
+    }
+    product
+}
+fn fizzbuzz (n: u32) -> u32 {
+    todo!();
+    // panic!();
+}
+fn main() {
+    let n = 4;
+    println!("{n}! = {}", factorial(n));
+    // fizzbuzz(1);
+}

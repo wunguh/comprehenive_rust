@@ -1,3 +1,7 @@
+/*
+MORNING
+*/
+
 /* 
 Basic Rust Syntax
 Types and Type Inference
@@ -202,22 +206,39 @@ User Defined Types
 //     dbg!(gcd(1024, 32));
 // }
 
-use std::iter::Product;
-
 // 6.7 Macros
-fn factorial(n: u32) -> u32 {
-    let mut product = 1;
-    for i in 1..=n {
-        product *= dbg!(i);
-    }
-    product
-}
-fn fizzbuzz (n: u32) -> u32 {
-    todo!();
-    // panic!();
-}
-fn main() {
-    let n = 4;
-    println!("{n}! = {}", factorial(n));
-    // fizzbuzz(1);
-}
+// fn factorial(n: u32) -> u32 {
+//     let mut product = 1;
+//     for i in 1..=n {
+//         product *= dbg!(i);
+//     }
+//     product
+// }
+// fn fizzbuzz (n: u32) -> u32 {
+//     todo!();
+//     // panic!();
+// }
+// fn main() {
+//     let n = 4;
+//     println!("{n}! = {}", factorial(n));
+//     // fizzbuzz(1);
+// }
+// some other macros are assert!, unreachable!, eprintln! & more
+
+// 6.8 Exercise: Collatz Sequence
+// fn collatz_length(mut n: i32) -> u32 {
+//     let mut len = 1;
+//     while n > 1 {
+//         n = if n % 2 == 0 { n / 2 } else { 3 * n + 1 };
+//         len += 1;
+//     }
+//     len
+// }
+// fn main() {
+//     let n = 1113;
+//     println!("Length: {}", collatz_length(n));
+// }
+
+/*
+AFTERNOON
+*/

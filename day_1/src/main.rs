@@ -1,12 +1,12 @@
-/*
-MORNING
-*/
-
 /* 
 Basic Rust Syntax
 Types and Type Inference
 Control Flow
 User Defined Types
+*/
+
+/*
+MORNING
 */
 
 // 5. Types and Values
@@ -242,3 +242,14 @@ User Defined Types
 /*
 AFTERNOON
 */
+
+// 8. Tuples and Arrays
+
+// 8.1 Arrays
+fn main() {
+    let x = 3;
+    let mut a: [i8; 5] = [5, 4, 3, 2, 1];
+    a[x] = 9;
+    println!("a: {a:?}");
+    println!("a[{}]: {:?}", x, a[x]);
+}

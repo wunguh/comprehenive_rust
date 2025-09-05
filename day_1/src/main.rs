@@ -67,17 +67,17 @@ MORNING
 // }
 
 // 5.6 Exercise: Fibonacci
-// fn fib(n: u128) -> u128 {
-//     if n < 2 {
-//         n
-//     } else {
-//         fib(n-1) + fib(n-2)
-//     }
-// }
-// fn main() {
-//     let n: u128 = 8;
-//     println!("fib({n}) = {}", fib(n));
-// }
+fn fib(n: u128) -> u128 {
+    if n < 2 {
+        n
+    } else {
+        fib(n-1) + fib(n-2)
+    }
+}
+fn main() {
+    let n: u128 = 8;
+    println!("fib({n}) = {}", fib(n));
+}
 
 // 6. Control Flow Basics
 

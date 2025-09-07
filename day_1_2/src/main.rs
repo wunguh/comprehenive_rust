@@ -75,11 +75,47 @@ AFTERNOON
 // 9. References
 
 // 9.1 Shared References
+// fn main() {
+//     let a = 'A';
+//     let b = 'B';
+//     let mut r: &char = &a;
+//     dbg!(r);
+//     r = &b;
+//     dbg!(r, a, b);
+// }
+
+// 9.2 Exclusive References
+// fn main() {
+//     let mut point = (1, 2);
+//     let x_coord = &mut point.0;
+//     *x_coord = 20;
+//     println!("point: {point:?}");
+// }
+
+// 9.3 Slices
+// fn main() {
+//     let a: [i32; 6] = [10, 20, 30, 40, 50, 60];
+//     println!("a: {a:?}");
+//     let b: &[i32] = &a[..a.len()-1];
+//     println!("b: {b:?}");
+//     let c: &[i32] = &b[..b.len()-1];
+//     println!("c: {c:?}");
+//     let d: &[i32] = &c[..c.len()-1];
+//     println!("d: {d:?}");
+//     let e: &[i32] = &d[..d.len()-1];
+//     println!("e: {e:?}");
+//     let f: &[i32] = &e[..e.len()-1];
+//     println!("f: {f:?}");
+// }
+
+// 9.4 Strings
 fn main() {
-    let a = 'A';
-    let b = 'B';
-    let mut r: &char = &a;
-    dbg!(r);
-    r = &b;
-    dbg!(r, a, b);
+    let s1: &str = "World";
+    println!("s1: {s1}");
+    let mut s2: String = String::from("Hello ");
+    println!("s2: {s2}");
+    s2.push_str(s1);
+    println!("s2: {s2}");
+    let s3: &str = &s2[2..9];
+    println!("s3: {s3}");
 }

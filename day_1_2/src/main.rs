@@ -130,23 +130,91 @@ AFTERNOON
 // }
 
 // Exercise: Geometry
-fn magnitude(vector: &[f64; 3]) -> f64 {
-    let mut mag_squared = 0.0;
-    for coord in vector {
-        mag_squared += coord.powf(2.0);
-    }
-    mag_squared.sqrt()
-}
-fn normalize(vector: &mut [f64; 3]) {
-    let mag = magnitude(vector);
-    for item in vector {
-        *item /= mag;
-    }
-}
+// fn magnitude(vector: &[f64; 3]) -> f64 {
+//     let mut mag_squared = 0.0;
+//     for coord in vector {
+//         mag_squared += coord.powf(2.0);
+//     }
+//     mag_squared.sqrt()
+// }
+// fn normalize(vector: &mut [f64; 3]) {
+//     let mag = magnitude(vector);
+//     for item in vector {
+//         *item /= mag;
+//     }
+// }
+// fn main() {
+//     println!("Magnitude of a unit vector: {}", magnitude(&[0.0, 1.0, 0.0]));
+//     let mut v = [1.0, 2.0, 9.0];
+//     println!("Magnitude of {v:?}: {}", magnitude(&v));
+//     normalize(&mut v);
+//     println!("Magnitude of {v:?} after normalization: {}", magnitude(&v));
+// }
+
+// 10. User-defined Types
+
+// 10.1 Named Structs
+// struct Person {
+//     name: String,
+//     age: u8
+// }
+// fn describe(person: &Person) {
+//     println!("{} is {} years old.", person.name, person.age);
+// }
+// fn main() {
+//     let mut peter = Person {
+//         name: String::from("Peter"),
+//         age: 27
+//     };
+//     describe(&peter);
+//     peter.age = 28;
+//     describe(&peter);
+//     let name = String::from("Avery");
+//     let age = 39;
+//     let avery = Person {name, age};
+//     describe(&avery);
+//     let jackie = Person { name: String::from("Jackie"), age: 30 };
+//     describe(&jackie);
+// }
+
+// 10.2 Tuple Structs
+// struct Point(i32, i32);
+// fn main() {
+//     let p = Point(17, 23);
+//     println!("({}, {})", p.0, p.1);
+// }
+
+// struct LbsOfForce(f64);
+// struct Newtons(f64);
+// fn compute_thruster_force() -> LbsOfForce {
+//     todo!("Ask a rocket scientist")
+// }
+// fn set_thruster_force(force: Newtons) {
+//     todo!("")
+// }
+// fn main() {
+//     let force = compute_thruster_force();
+//     set_thruster_force(force);
+// }
+
+// 10.3 Enums
+
+// #[derive(Debug)]
+// enum Direction {
+//     Left,
+//     Right
+// }
+// #[derive(Debug)]
+// enum PlayerMove {
+//     Pass,
+//     Run(Direction),
+//     Teleport {x: u32, y: u32}
+// }
+// fn main() {
+//     let dir = Direction::Left;
+//     let player_move: PlayerMove = PlayerMove::Run(dir);
+//     println!("On this turn: {player_move:?}");
+// }
 fn main() {
-    println!("Magnitude of a unit vector: {}", magnitude(&[0.0, 1.0, 0.0]));
-    let mut v = [1.0, 2.0, 9.0];
-    println!("Magnitude of {v:?}: {}", magnitude(&v));
-    normalize(&mut v);
-    println!("Magnitude of {v:?} after normalization: {}", magnitude(&v));
+    
 }
